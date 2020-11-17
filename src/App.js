@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { FormDataProvider } from "./context/formDataContext";
 import Login from "./components/login/login.component";
 import Ticket from './components/ticket/ticket.component';
+import Test from './components/test/test.component.jsx'
 import  {Dashboard}  from "./components/dashboard/dashboard.component";
 import "./App.css";
 
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path="/ticket">
            <Ticket/>
+        </Route>
+        <Route path="/test">
+            <Test />
         </Route>
         
       </Switch>
