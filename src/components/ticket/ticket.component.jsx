@@ -30,32 +30,10 @@ const useStyles = makeStyles({
 
 
 
-
-// const [rows, setRows] = useState([{
-//     id: '',
-//     description: 'y',
-//     priority: 'g',
-//     lastUpdate: 'd',
-//     ticketID: 'u'
-    
-// }])
-
-
-
-
-
 export default function BasicTable() {
 const classes = useStyles();
 
-let row = [
-  {
-    description: "",
-    priority: "",
-    lastUpdate: "",
-    ticketID: "",
-    
-  },
-];
+let row = [];
 const [rows, setRows] = useState(row);
  
  
@@ -72,8 +50,21 @@ const formDataHandler = ({ desc, option }) => {
   console.log(rows);
 };
 
+const removeTicket = ()=> {
+  let elementPos = row
+    .map(function (x) {
+      return x.id;
+    })
+    .indexOf(row);
+  const objectFound = row[elementPos];
+  
+  const itemRemoved = elementPos.splice(elementPos,1)
+
+console.log(itemRemoved)
 
   
+}
+
   return (
     <Container maxWidth="md">
       <Grid>
@@ -88,27 +79,22 @@ const formDataHandler = ({ desc, option }) => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows.map((row) => (
+              {rows.length>0?rows.map((row) => (
                 <TableRow key={row.ticketID}>
                   <TableCell component="th" scope="row">
                     {row.description}
-                    
                   </TableCell>
                   <TableCell>{row.priority}</TableCell>
                   <TableCell>{row.lastUpdate}</TableCell>
                   <TableCell>{row.ticketID}</TableCell>
-                  
 
-                    
-                  <TableCell style={{display: ((row.length) ?  1 : 0)}}> 
-                    <IconButton aria-label="delete"  color="primary" >
+                  <TableCell>
+                    <IconButton onClick={removeTicket} aria-label="delete" color="primary">
                       <DeleteIcon />
                     </IconButton>
                   </TableCell>
-                    
-                  
                 </TableRow>
-              ))}
+              )):null}
             </TableBody>
           </Table>
         </TableContainer>
