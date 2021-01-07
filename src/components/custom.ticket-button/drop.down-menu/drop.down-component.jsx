@@ -12,24 +12,19 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const options = [
-  ,
-  "High",
-  "Low",
-  
-];
-
-export default function SimpleListMenu({option}) {
+const options = ["Please select one of the following:", "High", "Low"];
+//destructured prop to be used in a function to retrieve the value
+export default function SimpleListMenu({ option }) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   const handleClickListItem = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
   const handleMenuItemClick = (value, index) => {
-    option(value)
+    option(value);
     setSelectedIndex(index);
     setAnchorEl(null);
   };
@@ -45,12 +40,14 @@ export default function SimpleListMenu({option}) {
           button
           aria-haspopup="true"
           aria-controls="lock-menu"
-          aria-label="Select option from below"
+          aria-label="Select Priority"
           onClick={handleClickListItem}
         >
           <ListItemText
-            primary="Select option from below"
+            required={true}
+            primary="Select Priority"
             secondary={options[selectedIndex]}
+            variant="outlined"
           />
         </ListItem>
       </List>

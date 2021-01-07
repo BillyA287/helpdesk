@@ -1,40 +1,45 @@
 import React from "react";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { FormDataProvider } from "./context/formDataContext";
+import { BrowserRouter as  Switch, Route} from "react-router-dom";
 import Login from "./components/login/login.component";
 import Ticket from './components/ticket/ticket.component';
-import Test from './components/test/test.component.jsx'
-import  {Dashboard}  from "./components/dashboard/dashboard.component";
+
+import Staff from './components/staff/staff.component.jsx'
+import  Dashboard from "./components/dashboard/dashboard.component";
 import "./App.css";
 
-function App() {
-  return (
+import {FormsProvider} from './context/forms.context'
+import { FormDataProvider } from "./context/formDataContext";
+import { Settings } from "./components/settings/settings.component";
 
-    
+function App() {
+
+
+
+  return (
     <main>
-      <header>
-        <Link to="/login">Login</Link>
-        <Link to="/dashboard">Dashboard</Link>
-      </header>
       <Switch>
-        <Route path="/login">
-          <FormDataProvider>
-            <Login />
-          </FormDataProvider>
-        </Route>
-        <Route path="/dashboard">
-          <FormDataProvider>
-            <Dashboard />
-          </FormDataProvider>
-        </Route>
-        <Route path="/ticket">
-           <Ticket/>
-        </Route>
-        <Route path="/test">
-            <Test />
-        </Route>
-        
+        <FormDataProvider>
+          <FormsProvider>
+            <Route path="/staff">
+              <Staff />
+            </Route>
+            <Route path="/dashboard">
+              <Dashboard />
+            </Route>
+            <Route path="/ticket">
+              <Ticket />
+            </Route>
+
+            <Route path="/settings">
+              <Settings />
+            </Route>
+
+            <Route path="/" exact>
+              <Login />
+            </Route>
+          </FormsProvider>
+        </FormDataProvider>
       </Switch>
     </main>
   );

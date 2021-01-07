@@ -5,15 +5,20 @@
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.57",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "clsx": "^1.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-hook-form": "^6.13.1",
+    "react-id-generator": "^3.0.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.4",
     "shortid": "^2.2.15",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "unique-random": "^2.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
