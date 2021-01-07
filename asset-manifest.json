@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/helpdesk/static/css/main.5f361e03.chunk.css",
-    "main.js": "/helpdesk/static/js/main.bf97b82d.chunk.js",
-    "main.js.map": "/helpdesk/static/js/main.bf97b82d.chunk.js.map",
+    "main.js": "/helpdesk/static/js/main.d336f474.chunk.js",
+    "main.js.map": "/helpdesk/static/js/main.d336f474.chunk.js.map",
     "runtime-main.js": "/helpdesk/static/js/runtime-main.077845f9.js",
     "runtime-main.js.map": "/helpdesk/static/js/runtime-main.077845f9.js.map",
-    "static/js/2.f26de220.chunk.js": "/helpdesk/static/js/2.f26de220.chunk.js",
-    "static/js/2.f26de220.chunk.js.map": "/helpdesk/static/js/2.f26de220.chunk.js.map",
+    "static/js/2.bd74d95b.chunk.js": "/helpdesk/static/js/2.bd74d95b.chunk.js",
+    "static/js/2.bd74d95b.chunk.js.map": "/helpdesk/static/js/2.bd74d95b.chunk.js.map",
     "index.html": "/helpdesk/index.html",
-    "precache-manifest.63407beeb52d7bbb96610477f4062f97.js": "/helpdesk/precache-manifest.63407beeb52d7bbb96610477f4062f97.js",
+    "precache-manifest.e54b240386abaf46a134f7a99f73606e.js": "/helpdesk/precache-manifest.e54b240386abaf46a134f7a99f73606e.js",
     "service-worker.js": "/helpdesk/service-worker.js",
     "static/css/main.5f361e03.chunk.css.map": "/helpdesk/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.f26de220.chunk.js.LICENSE.txt": "/helpdesk/static/js/2.f26de220.chunk.js.LICENSE.txt"
+    "static/js/2.bd74d95b.chunk.js.LICENSE.txt": "/helpdesk/static/js/2.bd74d95b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.077845f9.js",
-    "static/js/2.f26de220.chunk.js",
+    "static/js/2.bd74d95b.chunk.js",
     "static/css/main.5f361e03.chunk.css",
-    "static/js/main.bf97b82d.chunk.js"
+    "static/js/main.d336f474.chunk.js"
   ]
 }
