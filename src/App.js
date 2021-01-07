@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter as  Switch, Route} from "react-router-dom";
+import { HashRouter,  Switch, Route} from "react-router-dom";
 import Login from "./components/login/login.component";
 import Ticket from './components/ticket/ticket.component';
 
@@ -17,7 +17,9 @@ function App() {
 
 
   return (
-    <main>
+    
+    <HashRouter basename="/">
+
       <Switch>
         <FormDataProvider>
           <FormsProvider>
@@ -41,7 +43,8 @@ function App() {
           </FormsProvider>
         </FormDataProvider>
       </Switch>
-    </main>
+   </HashRouter>
+    
   );
 }
 
