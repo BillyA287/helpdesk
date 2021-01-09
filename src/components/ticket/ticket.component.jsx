@@ -303,7 +303,7 @@ function Ticket(props) {
             }
           >
             <Alert onClose={handleTicketAddedClose} severity="success">
-              New Ticket successfully added!
+              {"New Ticket successfully added!"}
             </Alert>
           </Snackbar>
           
