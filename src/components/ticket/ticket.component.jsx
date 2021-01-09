@@ -163,7 +163,6 @@ function Ticket(props) {
   // function to remove ticket on click
   const handleTicketDelete = (id) => {
     handleClickOpen();
-    console.log("what?");
     setCheckTicketId(id);
   };
 
