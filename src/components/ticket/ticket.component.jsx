@@ -175,6 +175,7 @@ function Ticket(props) {
   };
 
   return (
+    
     <div className={classes.root}>
       <main className={classes.content}>
         <div className={classes.toolbar} />
@@ -284,7 +285,7 @@ function Ticket(props) {
             {`Status has been changed to ${ticketUpdateValue}`}
           </Alert>
         </Snackbar>
-        } />
+       
         <div>
           <Snackbar
             className={classes.root}
@@ -302,10 +303,10 @@ function Ticket(props) {
             }
           >
             <Alert onClose={handleTicketAddedClose} severity="success">
-              New staff member successfully added!
+              New Ticket successfully added!
             </Alert>
           </Snackbar>
-          } />
+          
         </div>
       </div>
     </div>
